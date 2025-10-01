@@ -77,4 +77,57 @@ Demonstrates defining constructor and `display()` **inside** the class body. Dat
 ### Program 4: Defining Outside Class (`definingoutside.cpp`)  
 
 **Explanation:**  
-Constructor and member functions are **declared inside class** but **de**
+Constructor and member functions are **declared inside class** but **defined outside** using the scope resolution operator `::`.  
+
+**Algorithm:**  
+- Start  
+- Declare class `student` with members and function prototypes  
+- Define `student::student()` outside class for input  
+- Define `void student::display()` outside class to print details  
+- In `main()`: create object and call `display()`  
+- End  
+
+---
+
+### Program 5: Parameterized Constructor (`parametrisedconstructor.cpp`)  
+
+**Explanation:**  
+The `Product` class uses a constructor with parameters to set up product details.  
+
+**Algorithm:**  
+- Start  
+- Define class `Product` with members: ProID, Name, Category, Price  
+- Implement parameterized constructor to initialize values  
+- Implement `display()` to print product details  
+- In `main()`: create product object with values and call `display()`  
+- End  
+
+---
+
+### Program 6: Destructor Demonstration (`destructor.cpp`)  
+
+**Explanation:**  
+A destructor shows automatic cleanup when objects go out of scope. A global counter tracks object creation and destruction.  
+
+**Algorithm:**  
+- Start  
+- Initialize global `count = 0`  
+- Define class with:  
+  - Constructor → increment count, print message  
+  - Destructor → decrement count, print message  
+- In `main()`: create multiple objects to observe lifecycle messages  
+- End (destructors run automatically in reverse order)  
+
+---
+
+## Conclusion  
+
+The programs successfully demonstrate:  
+
+- **Default constructor** for fixed initialization  
+- **Parameterized constructor** for flexible initialization  
+- **Copy constructor** for object duplication  
+- **Inside and outside definitions** of member functions  
+- **Destructor** for automatic cleanup at the end of scope  
+
+These concepts together explain the **object lifecycle** in C++, showing how constructors initialize objects and destructors handle cleanup.  
